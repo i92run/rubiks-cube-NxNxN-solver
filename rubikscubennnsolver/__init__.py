@@ -4609,7 +4609,7 @@ class RubiksCube(object):
             self.solve_333()
             logger.info("solve_333 end")
 
-        # self.compress_solution()
+        self.compress_solution()
 
     def print_solution(self, include_comments: bool) -> None:
         """
