@@ -4503,8 +4503,8 @@ class RubiksCube(object):
         self.rotate_U_to_U()
         self.rotate_F_to_F()
 
-        if not self.edges_paired():
-            self.group_edges()
+        # if not self.edges_paired():
+            # self.group_edges()
 
     def reduce_333_slow(self) -> None:
         """
@@ -4586,28 +4586,28 @@ class RubiksCube(object):
             self.rotate_U_to_U()
             self.rotate_F_to_F()
 
-        logger.info("reduce_333 begin")
+        # logger.info("reduce_333 begin")
         # self.reduce_333_slow()
-        self.reduce_333()
-        logger.info("reduce_333 end")
+        # self.reduce_333()
+        # logger.info("reduce_333 end")
 
-        self.rotate_U_to_U()
-        self.rotate_F_to_F()
+        # self.rotate_U_to_U()
+        # self.rotate_F_to_F()
 
-        if not self.reduced_to_333():
-            raise SolveError("Should be reduced to 3x3x3 but is not")
+        # if not self.reduced_to_333():
+        #     raise SolveError("Should be reduced to 3x3x3 but is not")
 
-        if solution333:
-            reduce_333_solution_len = len(self.solution)
+        # if solution333:
+        #     reduce_333_solution_len = len(self.solution)
 
-            for step in solution333:
-                self.rotate(step)
+        #     for step in solution333:
+        #         self.rotate(step)
 
-            self.print_cube_add_comment("solve 3x3x3", reduce_333_solution_len)
-        else:
-            logger.info("solve_333 begin")
-            self.solve_333()
-            logger.info("solve_333 end")
+        #     self.print_cube_add_comment("solve 3x3x3", reduce_333_solution_len)
+        # else:
+        #     logger.info("solve_333 begin")
+        #     self.solve_333()
+        #     logger.info("solve_333 end")
 
         self.compress_solution()
 
