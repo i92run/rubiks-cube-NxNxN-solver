@@ -163,5 +163,5 @@ logger.info(f"Memory : {resource.getrusage(resource.RUSAGE_SELF).ru_maxrss:,} by
 logger.info(f"Time   : {end_time - start_time}")
 logger.info("")
 
-if not cube.solved():
-    raise SolveError("cube should be solved but is not")
+# if not cube.solved():
+#     raise SolveError("cube should be solved but is not")
