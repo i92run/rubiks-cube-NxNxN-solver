@@ -3303,7 +3303,7 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         self.stage_UD_centers()
         self.LR_centers_vertical_bars()
         self.UD_centers_vertical_bars()
-        # self.centers_daisy_solve()
+        self.centers_daisy_solve()
 
 
 def rotate_777(cube, step):
