@@ -121,7 +121,7 @@ if args.solution333:
 else:
     solution333 = []
 
-cube.mysolve(solution333)
+cube.solve(solution333)
 end_time = dt.datetime.now()
 cube.print_cube("Final Cube")
 cube.print_solution(not args.no_comments)
