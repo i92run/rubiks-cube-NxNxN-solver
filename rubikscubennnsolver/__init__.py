@@ -4503,9 +4503,24 @@ class RubiksCube(object):
         self.rotate_U_to_U()
         self.rotate_F_to_F()
 
-        # if not self.edges_paired():
-            # self.group_edges()
+        if not self.edges_paired():
+            self.group_edges()
+            
+    def myreduce_333(self) -> None:
+        """
+        Solve the centers and pair the edges to reduce the cube to a 3x3x3
+        """
+        if self.centers_solved() and self.edges_paired():
+            logger.info("already reduced to 5x5x5")
+        else:
+            self.reduce_555()
 
+        self.rotate_U_to_U()
+        self.rotate_F_to_F()
+
+        # if not self.edges_paired():
+        #     self.group_edges()
+            
     def reduce_333_slow(self) -> None:
         """
         Solve the centers and pair the edges to reduce the cube to a 3x3x3 but try a few re-colorings to try
@@ -4591,6 +4606,50 @@ class RubiksCube(object):
         self.reduce_333()
         # logger.info("reduce_333 end")
 
+        self.rotate_U_to_U()
+        self.rotate_F_to_F()
+
+        if not self.reduced_to_333():
+            raise SolveError("Should be reduced to 3x3x3 but is not")
+
+        if solution333:
+            reduce_333_solution_len = len(self.solution)
+
+            for step in solution333:
+                self.rotate(step)
+
+            self.print_cube_add_comment("solve 3x3x3", reduce_333_solution_len)
+        else:
+            logger.info("solve_333 begin")
+            self.solve_333()
+            logger.info("solve_333 end")
+
+        self.compress_solution()
+
+    def mysolve(self, solution333: str = None) -> None:
+        """
+        The RubiksCube222 and RubiksCube333 child classes will override this since they do not
+        need to group centers or edges
+
+        Args:
+            solution333: will only be populated in a FMC (Fewest Move Challenge) scenario
+        """
+        if self.solved():
+            return
+
+        logger.info("lt_init begin")
+        self.lt_init()
+        logger.info("lt_init end")
+
+        if self.is_odd() or self.centers_solved():
+            self.rotate_U_to_U()
+            self.rotate_F_to_F()
+
+        # logger.info("reduce_333 begin")
+        # self.reduce_333_slow()
+        self.reduce_333()
+        # logger.info("reduce_333 end")
+
         # self.rotate_U_to_U()
         # self.rotate_F_to_F()
 
@@ -4610,7 +4669,7 @@ class RubiksCube(object):
         #     logger.info("solve_333 end")
 
         self.compress_solution()
-
+        
     def print_solution(self, include_comments: bool) -> None:
         """
         Print an alg.cubing.net URL for this cube and its solution. Also write the solution
