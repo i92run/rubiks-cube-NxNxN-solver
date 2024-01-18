@@ -3299,8 +3299,8 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
 
     def reduce_555(self):
         self.lt_init()
-        self.stage_LR_centers(False)
-        self.stage_UD_centers(False)
+        self.stage_LR_t_centers()
+        self.stage_UD_t_centers()
         self.LR_centers_vertical_bars()
         self.UD_centers_vertical_bars()
         self.centers_daisy_solve()
