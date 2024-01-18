@@ -4694,8 +4694,8 @@ class RubiksCube(object):
         self.reduce_333()
         # logger.info("reduce_333 end")
 
-        self.rotate_U_to_U()
-        self.rotate_F_to_F()
+        # self.rotate_U_to_U()
+        # self.rotate_F_to_F()
 
         # if not self.reduced_to_333():
         #     raise SolveError("Should be reduced to 3x3x3 but is not")
