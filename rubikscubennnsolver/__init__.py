@@ -4647,7 +4647,7 @@ class RubiksCube(object):
 
         # logger.info("reduce_333 begin")
         # self.reduce_333_slow()
-        self.reduce_333()
+        self.myreduce_333()
         # logger.info("reduce_333 end")
 
         # self.rotate_U_to_U()
