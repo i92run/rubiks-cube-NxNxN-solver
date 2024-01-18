@@ -4515,8 +4515,8 @@ class RubiksCube(object):
         else:
             self.reduce_555()
 
-        self.rotate_U_to_U()
-        self.rotate_F_to_F()
+        # self.rotate_U_to_U()
+        # self.rotate_F_to_F()
 
         # if not self.edges_paired():
         #     self.group_edges()
