@@ -20,12 +20,12 @@ moves_777 = (
     "B", "B'", "B2", "Bw", "Bw'", "Bw2", "3Bw", "3Bw'", "3Bw2",
     "D", "D'", "D2", "Dw", "Dw'", "Dw2", "3Dw", "3Dw'", "3Dw2",
     # slices...not used for now
-    "2U", "2U'", "2U2", "2D", "2D'", "2D2",
-    "2L", "2L'", "2L2", "2R", "2R'", "2R2",
-    "2F", "2F'", "2F2", "2B", "2B'", "2B2",
-    "3U", "3U'", "3U2", "3D", "3D'", "3D2",
-    "3L", "3L'", "3L2", "3R", "3R'", "3R2",
-    "3F", "3F'", "3F2", "3B", "3B'", "3B2"
+    # "2U", "2U'", "2U2", "2D", "2D'", "2D2",
+    # "2L", "2L'", "2L2", "2R", "2R'", "2R2",
+    # "2F", "2F'", "2F2", "2B", "2B'", "2B2",
+    # "3U", "3U'", "3U2", "3D", "3D'", "3D2",
+    # "3L", "3L'", "3L2", "3R", "3R'", "3R2",
+    # "3F", "3F'", "3F2", "3B", "3B'", "3B2"
 )
 
 solved_777 = "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUURRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
