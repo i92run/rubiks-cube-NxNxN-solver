@@ -3156,9 +3156,8 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         #         elif step.startswith("3"):
         #             raise Exception("5x5x5 solution has 3 wide turn")
         #         self.rotate(step)
-        desc = "LR centers staged"
         
-        self.print_cube_add_comment(desc, tmp_solution_len)
+        # self.print_cube_add_comment(desc, tmp_solution_len)
 
     def stage_LR_centers(self):
         self._stage_LR_centers_common(True)
@@ -3244,9 +3243,8 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         #         elif step.startswith("3"):
         #             raise Exception("5x5x5 solution has 3 wide turn")
         #         self.rotate(step)
-        desc = "UD centers staged"
         
-        self.print_cube_add_comment(desc, tmp_solution_len)
+        # self.print_cube_add_comment(desc, tmp_solution_len)
 
     def stage_UD_centers(self):
         self._stage_UD_centers(True)
