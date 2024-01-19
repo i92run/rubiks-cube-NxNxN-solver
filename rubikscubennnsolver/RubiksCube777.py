@@ -3168,28 +3168,28 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         self.lt_LR_oblique_edge_pairing.solve_via_c(use_kociemba_string=True)
         self.print_cube_add_comment("LR oblique edges staged", tmp_solution_len)
     
-        # phase 3 - use 5x5x5 solver to stage the LR centers
-        tmp_solution_len = len(self.solution)
-        self.create_fake_555_from_outside_centers()
+        # # phase 3 - use 5x5x5 solver to stage the LR centers
+        # tmp_solution_len = len(self.solution)
+        # self.create_fake_555_from_outside_centers()
 
-        if all_centers:
-            self.fake_555.group_centers_stage_LR()
-            desc = "LR centers staged"
-        else:
-            self.fake_555.lt_LR_t_centers_stage_ida.solve_via_c()
-            desc = "LR t-centers staged"
+        # if all_centers:
+        #     self.fake_555.group_centers_stage_LR()
+        #     desc = "LR centers staged"
+        # else:
+        #     self.fake_555.lt_LR_t_centers_stage_ida.solve_via_c()
+        #     desc = "LR t-centers staged"
 
-        for step in self.fake_555.solution:
-            if step.startswith("COMMENT"):
-                pass
-            else:
-                if step.startswith("5"):
-                    step = "7" + step[1:]
-                elif step.startswith("3"):
-                    raise Exception("5x5x5 solution has 3 wide turn")
-                self.rotate(step)
+        # for step in self.fake_555.solution:
+        #     if step.startswith("COMMENT"):
+        #         pass
+        #     else:
+        #         if step.startswith("5"):
+        #             step = "7" + step[1:]
+        #         elif step.startswith("3"):
+        #             raise Exception("5x5x5 solution has 3 wide turn")
+        #         self.rotate(step)
         
-        self.print_cube_add_comment(desc, tmp_solution_len)
+        # self.print_cube_add_comment(desc, tmp_solution_len)
         
     def stage_LR_centers(self):
         self._stage_LR_centers_common(True)
@@ -3297,28 +3297,28 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
             # $ self.lt_UD_oblique_edge_pairing_new.solve_via_c()
             self.print_cube_add_comment("UD oblique edges paired", tmp_solution_len)
     
-        # phase 6 - use 5x5x5 to stage the UD centers
-        tmp_solution_len = len(self.solution)
-        self.create_fake_555_from_outside_centers()
+        # # phase 6 - use 5x5x5 to stage the UD centers
+        # tmp_solution_len = len(self.solution)
+        # self.create_fake_555_from_outside_centers()
 
-        if all_centers:
-            self.fake_555.group_centers_stage_FB()
-            desc = "UD centers staged"
-        else:
-            self.fake_555.lt_UD_t_centers_stage_ida.solve_via_c()
-            desc = "UD t-centers staged"
+        # if all_centers:
+        #     self.fake_555.group_centers_stage_FB()
+        #     desc = "UD centers staged"
+        # else:
+        #     self.fake_555.lt_UD_t_centers_stage_ida.solve_via_c()
+        #     desc = "UD t-centers staged"
 
-        for step in self.fake_555.solution:
-            if step.startswith("COMMENT"):
-                pass
-            else:
-                if step.startswith("5"):
-                    step = "7" + step[1:]
-                elif step.startswith("3"):
-                    raise Exception("5x5x5 solution has 3 wide turn")
-                self.rotate(step)
+        # for step in self.fake_555.solution:
+        #     if step.startswith("COMMENT"):
+        #         pass
+        #     else:
+        #         if step.startswith("5"):
+        #             step = "7" + step[1:]
+        #         elif step.startswith("3"):
+        #             raise Exception("5x5x5 solution has 3 wide turn")
+        #         self.rotate(step)
         
-        self.print_cube_add_comment(desc, tmp_solution_len)
+        # self.print_cube_add_comment(desc, tmp_solution_len)
         
     def stage_UD_centers(self):
         self._stage_UD_centers(True)
@@ -3395,11 +3395,11 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         self.mystage_UD_centers()
         self.LR_centers_vertical_bars()
         self.UD_centers_vertical_bars()
-        # self.centers_daisy_solve()
+        self.centers_daisy_solve()
         
-        tmp_solution_len = len(self.solution)
-        self.lt_step70.solve_via_c()
-        self.print_cube_add_comment("t-centers solved", tmp_solution_len)
+        # tmp_solution_len = len(self.solution)
+        # self.lt_step70.solve_via_c()
+        # self.print_cube_add_comment("t-centers solved", tmp_solution_len)
         
 def rotate_777(cube, step):
     return [cube[x] for x in swaps_777[step]]
