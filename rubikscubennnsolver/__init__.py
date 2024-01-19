@@ -4758,7 +4758,7 @@ class RubiksCube(object):
             self.rotate_U_to_U()
             self.rotate_F_to_F()
 
-        self.myreduce_333_2()
+        self.myreduce_333_3()
 
         self.compress_solution()
 
