@@ -3881,6 +3881,24 @@ class RubiksCube555(RubiksCube):
         # phases 4 5 and 6
         self.pair_edges()
 
+    def myreduce_333_2(self):
+        self.lt_init()
 
+        if self.centers_solved() and self.edges_paired():
+            return
+
+        self.rotate_U_to_U()
+        self.rotate_F_to_F()
+
+        if False:
+            self.group_centers_phase1_and_2()
+
+        else:
+            # phase 1
+            self.group_centers_stage_LR()
+
+            # phase 2
+            self.group_centers_stage_FB()
+        
 def rotate_555(cube, step):
     return [cube[x] for x in swaps_555[step]]
