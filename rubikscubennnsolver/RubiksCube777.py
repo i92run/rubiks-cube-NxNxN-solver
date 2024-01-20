@@ -3398,6 +3398,7 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         # self.centers_daisy_solve()
     
     def myreduce_555_3(self):
+        self.lt_init()
         self.centers_daisy_solve()
         
 def rotate_777(cube, step):
