@@ -3393,12 +3393,14 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
     def myreduce_555_2(self):
         self.lt_init()
         self.mystage_UD_centers()
-        self.LR_centers_vertical_bars()
-        self.UD_centers_vertical_bars()
+        # self.LR_centers_vertical_bars()
+        # self.UD_centers_vertical_bars()
         # self.centers_daisy_solve()
     
     def myreduce_555_3(self):
         self.lt_init()
+        self.LR_centers_vertical_bars()
+        self.UD_centers_vertical_bars()
         # self.centers_daisy_solve()
 
         tmp_solution_len = len(self.solution)
