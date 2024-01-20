@@ -3258,50 +3258,11 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
             # $ self.lt_UD_oblique_edge_pairing_new.solve_via_c()
             self.print_cube_add_comment("UD oblique edges paired", tmp_solution_len)
 
-        # # phase 6 - use 5x5x5 to stage the UD centers
-        # tmp_solution_len = len(self.solution)
-        # self.create_fake_555_from_outside_centers()
-
-        # if all_centers:
-        #     self.fake_555.group_centers_stage_FB()
-        #     desc = "UD centers staged"
-        # else:
-        #     self.fake_555.lt_UD_t_centers_stage_ida.solve_via_c()
-        #     desc = "UD t-centers staged"
-
-        # for step in self.fake_555.solution:
-        #     if step.startswith("COMMENT"):
-        #         pass
-        #     else:
-        #         if step.startswith("5"):
-        #             step = "7" + step[1:]
-        #         elif step.startswith("3"):
-        #             raise Exception("5x5x5 solution has 3 wide turn")
-        #         self.rotate(step)
-        
-        # self.print_cube_add_comment(desc, tmp_solution_len)
-
-    def my_stage_UD_centers(self, all_centers: bool):
-        if self.UD_centers_staged():
-            return
-
-        if False:
-            tmp_solution_len = len(self.solution)
-            self.lt_phase4.solve_via_c(use_kociemba_string=True)
-            self.print_cube_add_comment("UD inner x-centers staged, oblique edges paired", tmp_solution_len)
-
-        else:
-            # phase 5 - pair the oblique UD edges
-            tmp_solution_len = len(self.solution)
-            self.lt_UD_oblique_edge_pairing.solve_via_c(use_kociemba_string=True)
-            # $ self.lt_UD_oblique_edge_pairing_new.solve_via_c()
-            self.print_cube_add_comment("UD oblique edges paired", tmp_solution_len)
-    
         # phase 6 - use 5x5x5 to stage the UD centers
         tmp_solution_len = len(self.solution)
         self.create_fake_555_from_outside_centers()
 
-        if False:
+        if all_centers:
             self.fake_555.group_centers_stage_FB()
             desc = "UD centers staged"
         else:
@@ -3319,6 +3280,45 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
                 self.rotate(step)
         
         self.print_cube_add_comment(desc, tmp_solution_len)
+
+    def my_stage_UD_centers(self, all_centers: bool):
+        if self.UD_centers_staged():
+            return
+
+        if False:
+            tmp_solution_len = len(self.solution)
+            self.lt_phase4.solve_via_c(use_kociemba_string=True)
+            self.print_cube_add_comment("UD inner x-centers staged, oblique edges paired", tmp_solution_len)
+
+        else:
+            # phase 5 - pair the oblique UD edges
+            tmp_solution_len = len(self.solution)
+            self.lt_UD_oblique_edge_pairing.solve_via_c(use_kociemba_string=True)
+            # $ self.lt_UD_oblique_edge_pairing_new.solve_via_c()
+            self.print_cube_add_comment("UD oblique edges paired", tmp_solution_len)
+    
+        # # phase 6 - use 5x5x5 to stage the UD centers
+        # tmp_solution_len = len(self.solution)
+        # self.create_fake_555_from_outside_centers()
+
+        # if False:
+        #     self.fake_555.group_centers_stage_FB()
+        #     desc = "UD centers staged"
+        # else:
+        #     self.fake_555.lt_UD_t_centers_stage_ida.solve_via_c()
+        #     desc = "UD t-centers staged"
+
+        # for step in self.fake_555.solution:
+        #     if step.startswith("COMMENT"):
+        #         pass
+        #     else:
+        #         if step.startswith("5"):
+        #             step = "7" + step[1:]
+        #         elif step.startswith("3"):
+        #             raise Exception("5x5x5 solution has 3 wide turn")
+        #         self.rotate(step)
+        
+        # self.print_cube_add_comment(desc, tmp_solution_len)
         
     def stage_UD_centers(self):
         self._stage_UD_centers(True)
@@ -3386,14 +3386,14 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         self.lt_init()
         self.mystage_LR_centers()
         # self.mystage_UD_centers()
-        self.LR_centers_vertical_bars()
+        # self.LR_centers_vertical_bars()
         # self.UD_centers_vertical_bars()
         # self.centers_daisy_solve()
         
     def myreduce_555_2(self):
         self.lt_init()
         self.mystage_UD_centers()
-        # self.LR_centers_vertical_bars()
+        self.LR_centers_vertical_bars()
         self.UD_centers_vertical_bars()
         self.centers_daisy_solve()
     
