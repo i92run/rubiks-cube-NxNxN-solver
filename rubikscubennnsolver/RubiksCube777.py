@@ -3406,6 +3406,10 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         # tmp_solution_len = len(self.solution)
         # self.lt_step70.solve_via_c()
         # self.print_cube_add_comment("t-centers solved", tmp_solution_len)
+
+    def myreduce_555_4(self):
+        self.lt_init()
+        self.centers_daisy_solve()
         
 def rotate_777(cube, step):
     return [cube[x] for x in swaps_777[step]]
