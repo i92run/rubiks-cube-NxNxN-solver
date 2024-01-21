@@ -3195,7 +3195,7 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         self._stage_LR_centers_common(True)
         
     def mystage_LR_centers(self):
-        self.my_stage_LR_centers_common(True)
+        self.my_stage_LR_centers_common(False)
         
     def stage_LR_t_centers(self):
         self._stage_LR_centers_common(False)
@@ -3324,7 +3324,7 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         self._stage_UD_centers(True)
 
     def mystage_UD_centers(self):
-        self.my_stage_UD_centers(True)
+        self.my_stage_UD_centers(False)
         
     def stage_UD_t_centers(self):
         self._stage_UD_centers(False)
@@ -3401,7 +3401,7 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         self.lt_init()
         self.LR_centers_vertical_bars()
         self.UD_centers_vertical_bars()
-        # self.centers_daisy_solve()
+        self.centers_daisy_solve()
 
         # tmp_solution_len = len(self.solution)
         # self.lt_step70.solve_via_c()
