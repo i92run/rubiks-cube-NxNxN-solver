@@ -3401,11 +3401,11 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         self.lt_init()
         self.LR_centers_vertical_bars()
         self.UD_centers_vertical_bars()
-        # self.centers_daisy_solve()
+        self.centers_daisy_solve()
 
-        tmp_solution_len = len(self.solution)
-        self.lt_step70.solve_via_c()
-        self.print_cube_add_comment("t-centers solved", tmp_solution_len)
+        # tmp_solution_len = len(self.solution)
+        # self.lt_step70.solve_via_c()
+        # self.print_cube_add_comment("t-centers solved", tmp_solution_len)
 
     def myreduce_555_4(self):
         self.lt_init()
