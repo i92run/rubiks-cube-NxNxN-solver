@@ -3172,7 +3172,7 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         tmp_solution_len = len(self.solution)
         self.create_fake_555_from_outside_centers()
 
-        if True:
+        if False:
             self.fake_555.group_centers_stage_LR()
             desc = "LR centers staged"
         else:
@@ -3301,7 +3301,7 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         tmp_solution_len = len(self.solution)
         self.create_fake_555_from_outside_centers()
 
-        if True:
+        if False:
             self.fake_555.group_centers_stage_FB()
             desc = "UD centers staged"
         else:
