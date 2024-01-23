@@ -4641,9 +4641,9 @@ class RubiksCube(object):
         self.lt_init()
         logger.info("lt_init end")
 
-        if self.is_odd() or self.centers_solved():
-            self.rotate_U_to_U()
-            self.rotate_F_to_F()
+        # if self.is_odd() or self.centers_solved():
+        #     self.rotate_U_to_U()
+        #     self.rotate_F_to_F()
 
         # logger.info("reduce_333 begin")
         # self.reduce_333_slow()
@@ -4685,9 +4685,9 @@ class RubiksCube(object):
         self.lt_init()
         logger.info("lt_init end")
 
-        if self.is_odd() or self.centers_solved():
-            self.rotate_U_to_U()
-            self.rotate_F_to_F()
+        # if self.is_odd() or self.centers_solved():
+        #     self.rotate_U_to_U()
+        #     self.rotate_F_to_F()
 
         # logger.info("reduce_333 begin")
         # self.reduce_333_slow()
@@ -4722,9 +4722,9 @@ class RubiksCube(object):
         self.lt_init()
         logger.info("lt_init end")
 
-        if self.is_odd() or self.centers_solved():
-            self.rotate_U_to_U()
-            self.rotate_F_to_F()
+        # if self.is_odd() or self.centers_solved():
+        #     self.rotate_U_to_U()
+        #     self.rotate_F_to_F()
 
         self.myreduce_333_2()
 
@@ -4738,9 +4738,9 @@ class RubiksCube(object):
         self.lt_init()
         logger.info("lt_init end")
 
-        if self.is_odd() or self.centers_solved():
-            self.rotate_U_to_U()
-            self.rotate_F_to_F()
+        # if self.is_odd() or self.centers_solved():
+        #     self.rotate_U_to_U()
+        #     self.rotate_F_to_F()
 
         self.myreduce_555_1()
 
@@ -4754,9 +4754,9 @@ class RubiksCube(object):
         self.lt_init()
         logger.info("lt_init end")
 
-        if self.is_odd() or self.centers_solved():
-            self.rotate_U_to_U()
-            self.rotate_F_to_F()
+        # if self.is_odd() or self.centers_solved():
+        #     self.rotate_U_to_U()
+        #     self.rotate_F_to_F()
 
         self.myreduce_333_3()
 
@@ -4770,9 +4770,9 @@ class RubiksCube(object):
         self.lt_init()
         logger.info("lt_init end")
 
-        if self.is_odd() or self.centers_solved():
-            self.rotate_U_to_U()
-            self.rotate_F_to_F()
+        # if self.is_odd() or self.centers_solved():
+        #     self.rotate_U_to_U()
+        #     self.rotate_F_to_F()
 
         self.myreduce_555_2()
 
@@ -4786,9 +4786,9 @@ class RubiksCube(object):
         self.lt_init()
         logger.info("lt_init end")
 
-        if self.is_odd() or self.centers_solved():
-            self.rotate_U_to_U()
-            self.rotate_F_to_F()
+        # if self.is_odd() or self.centers_solved():
+        #     self.rotate_U_to_U()
+        #     self.rotate_F_to_F()
 
         self.myreduce_555_3()
 
@@ -4802,9 +4802,9 @@ class RubiksCube(object):
         self.lt_init()
         logger.info("lt_init end")
 
-        if self.is_odd() or self.centers_solved():
-            self.rotate_U_to_U()
-            self.rotate_F_to_F()
+        # if self.is_odd() or self.centers_solved():
+        #     self.rotate_U_to_U()
+        #     self.rotate_F_to_F()
 
         self.myreduce_555_4()
 
