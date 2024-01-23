@@ -4715,23 +4715,19 @@ class RubiksCube(object):
         self.compress_solution()
 
     def mysolve3(self, solution333: str = None) -> None:
-        # if self.solved():
-        #     return
+        if self.solved():
+            return
 
-        # logger.info("lt_init begin")
-        # self.lt_init()
-        # logger.info("lt_init end")
+        logger.info("lt_init begin")
+        self.lt_init()
+        logger.info("lt_init end")
 
-        # if self.is_odd() or self.centers_solved():
-        #     self.rotate_U_to_U()
-        #     self.rotate_F_to_F()
+        if self.is_odd() or self.centers_solved():
+            self.rotate_U_to_U()
+            self.rotate_F_to_F()
 
-        # self.myreduce_333_2()
+        self.myreduce_333_2()
 
-        # self.compress_solution()
-
-        self.rotate_U_to_U()
-        self.rotate_F_to_F()
         self.compress_solution()
 
     def mysolve4(self, solution333: str = None) -> None:
