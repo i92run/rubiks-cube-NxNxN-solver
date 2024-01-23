@@ -22,9 +22,9 @@ moves_555 = (
     "B", "B'", "B2", "Bw", "Bw'", "Bw2",
     "D", "D'", "D2", "Dw", "Dw'", "Dw2",
     # slices...not used for now
-    # "2U", "2U'", "2U2", "2D", "2D'", "2D2",
-    # "2L", "2L'", "2L2", "2R", "2R'", "2R2",
-    # "2F", "2F'", "2F2", "2B", "2B'", "2B2"
+    "2U", "2U'", "2U2", "2D", "2D'", "2D2",
+    "2L", "2L'", "2L2", "2R", "2R'", "2R2",
+    "2F", "2F'", "2F2", "2B", "2B'", "2B2"
 )
 solved_555 = "UUUUUUUUUUUUUUUUUUUUUUUUURRRRRRRRRRRRRRRRRRRRRRRRRFFFFFFFFFFFFFFFFFFFFFFFFFDDDDDDDDDDDDDDDDDDDDDDDDDLLLLLLLLLLLLLLLLLLLLLLLLLBBBBBBBBBBBBBBBBBBBBBBBBB"
 
