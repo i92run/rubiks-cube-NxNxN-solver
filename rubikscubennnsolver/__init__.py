@@ -4732,6 +4732,7 @@ class RubiksCube(object):
 
         self.rotate_U_to_U()
         self.rotate_F_to_F()
+        self.compress_solution()
 
     def mysolve4(self, solution333: str = None) -> None:
         if self.solved():
