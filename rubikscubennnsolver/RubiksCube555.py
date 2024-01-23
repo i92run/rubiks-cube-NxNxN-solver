@@ -3895,8 +3895,8 @@ class RubiksCube555(RubiksCube):
 
         else:
             # phase 1
-            # self.group_centers_stage_LR()
-            self.lt_LR_t_centers_stage_ida.solve_via_c()
+            self.group_centers_stage_LR()
+            # self.lt_LR_t_centers_stage_ida.solve_via_c()
 
     def myreduce_333_3(self):
         self.lt_init()
@@ -3912,8 +3912,8 @@ class RubiksCube555(RubiksCube):
 
         else:
             # phase 2
-            # self.group_centers_stage_FB()
-            self.lt_UD_t_centers_stage_ida.solve_via_c()
+            self.group_centers_stage_FB()
+            # self.lt_UD_t_centers_stage_ida.solve_via_c()
         
 def rotate_555(cube, step):
     return [cube[x] for x in swaps_555[step]]
