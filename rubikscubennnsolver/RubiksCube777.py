@@ -3418,6 +3418,16 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         tmp_solution_len = len(self.solution)
         self.lt_UD_oblique_edge_pairing.solve_via_c(use_kociemba_string=True)
         self.print_cube_add_comment("UD oblique edges paired", tmp_solution_len)
-        
+
+    def myreduce_555_6(self):
+        self.lt_init()
+        # self.LR_centers_vertical_bars()
+        # self.UD_centers_vertical_bars()
+        self.centers_daisy_solve()
+
+        # tmp_solution_len = len(self.solution)
+        # self.lt_step70.solve_via_c()
+        # self.print_cube_add_comment("t-centers solved", tmp_solution_len)
+
 def rotate_777(cube, step):
     return [cube[x] for x in swaps_777[step]]
