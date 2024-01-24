@@ -3168,28 +3168,28 @@ class RubiksCube777(RubiksCubeNNNOddEdges):
         self.lt_LR_oblique_edge_pairing.solve_via_c(use_kociemba_string=True)
         self.print_cube_add_comment("LR oblique edges staged", tmp_solution_len)
     
-        # phase 3 - use 5x5x5 solver to stage the LR centers
-        tmp_solution_len = len(self.solution)
-        self.create_fake_555_from_outside_centers()
+        # # phase 3 - use 5x5x5 solver to stage the LR centers
+        # tmp_solution_len = len(self.solution)
+        # self.create_fake_555_from_outside_centers()
 
-        if False:
-            self.fake_555.group_centers_stage_LR()
-            desc = "LR centers staged"
-        else:
-            self.fake_555.lt_LR_t_centers_stage_ida.solve_via_c()
-            desc = "LR t-centers staged"
+        # if False:
+        #     self.fake_555.group_centers_stage_LR()
+        #     desc = "LR centers staged"
+        # else:
+        #     self.fake_555.lt_LR_t_centers_stage_ida.solve_via_c()
+        #     desc = "LR t-centers staged"
 
-        for step in self.fake_555.solution:
-            if step.startswith("COMMENT"):
-                pass
-            else:
-                if step.startswith("5"):
-                    step = "7" + step[1:]
-                elif step.startswith("3"):
-                    raise Exception("5x5x5 solution has 3 wide turn")
-                self.rotate(step)
+        # for step in self.fake_555.solution:
+        #     if step.startswith("COMMENT"):
+        #         pass
+        #     else:
+        #         if step.startswith("5"):
+        #             step = "7" + step[1:]
+        #         elif step.startswith("3"):
+        #             raise Exception("5x5x5 solution has 3 wide turn")
+        #         self.rotate(step)
         
-        self.print_cube_add_comment(desc, tmp_solution_len)
+        # self.print_cube_add_comment(desc, tmp_solution_len)
         
     def stage_LR_centers(self):
         self._stage_LR_centers_common(True)
