@@ -2006,6 +2006,14 @@ class RubiksCube666(RubiksCubeNNNEvenEdges):
         self.daisy_solve_centers_eo_edges()
         self.pair_inside_edges_via_444()
 
+    def reduce_555_2(self):
+        if self.reduced_to_555():
+            return
 
+        self.lt_init()
+        self.stage_centers()
+        self.daisy_solve_centers_eo_edges()
+        # self.pair_inside_edges_via_444()
+        
 def rotate_666(cube, step):
     return [cube[x] for x in swaps_666[step]]
