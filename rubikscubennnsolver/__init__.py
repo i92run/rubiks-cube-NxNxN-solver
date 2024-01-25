@@ -4513,7 +4513,7 @@ class RubiksCube(object):
         if self.centers_solved() and self.edges_paired():
             logger.info("already reduced to 5x5x5")
         else:
-            self.reduce_555()
+            self.reduce_555_2()
 
         # self.rotate_U_to_U()
         # self.rotate_F_to_F()
