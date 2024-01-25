@@ -2021,7 +2021,7 @@ class RubiksCube666(RubiksCubeNNNEvenEdges):
         self.lt_init()
         self.stage_centers()
         self.daisy_solve_centers_eo_edges()
-        self.pair_inside_edges_via_444()
+        # self.pair_inside_edges_via_444()
         
 def rotate_666(cube, step):
     return [cube[x] for x in swaps_666[step]]
