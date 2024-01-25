@@ -2016,6 +2016,7 @@ class RubiksCube666(RubiksCubeNNNEvenEdges):
         # self.pair_inside_edges_via_444()
 
         self.stage_t_centers()
+        self.daisy_solve_centers()
         
 def rotate_666(cube, step):
     return [cube[x] for x in swaps_666[step]]
