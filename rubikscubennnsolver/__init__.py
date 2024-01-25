@@ -4521,7 +4521,7 @@ class RubiksCube(object):
         # if not self.edges_paired():
         #     self.group_edges()
 
-    def myreduce_333(self) -> None:
+    def myreduce_333_2(self) -> None:
         """
         Solve the centers and pair the edges to reduce the cube to a 3x3x3
         """
